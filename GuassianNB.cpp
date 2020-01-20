@@ -60,8 +60,11 @@ class GuassianNB
                     {
                         if (temp[i] == ',') temp[i] = ' ';
                     }
+
+                    istringstream parse(temp);
+                    for (string t; parse >> t; )
                     //append each string onto the current vector
-                    item.push_back(temp);
+                        item.push_back(t);
                 }
                 //insert the row onto the data
                 insert(item);
@@ -73,7 +76,7 @@ class GuassianNB
         {   
             ignored_cols = ignores;
             load(filename); //load data
-            split_data();
+            //split_data();
         }
 
         void displayData()
@@ -86,7 +89,7 @@ class GuassianNB
             {
                 for (auto &item : entry)
                 {
-                    cout << item << " ";
+                    cout << typeid(item).name() << "|" << item << " ";
                 }
                 cout << "\n";
             }
@@ -119,6 +122,6 @@ int main()
     ignores.push_back(0);
     
     GuassianNB classifier = GuassianNB("iris.data", ignores);
-    classifier.display();
+    classifier.displayData();
 
 }
