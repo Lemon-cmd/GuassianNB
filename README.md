@@ -16,7 +16,7 @@ For example, if the current input entry is [1.4, 2.4, 3.5, 5.0].
       
 For iteration, calculate the probability for each element of input.    
 
-Basically, probability(C) = probability(INP(0)) * probability(INP(1)) ... * proability(INP(n));      
+Basically, probability(C) = probability(INP(0)) * probability(INP(1)) ... * probability(INP(n))      
  
 ***After calculating probability of all classes based on input, a max method is used to determine the highest probability and select the best class.***  
 
