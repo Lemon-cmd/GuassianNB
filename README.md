@@ -13,6 +13,7 @@ It applies this equation to each given test input to calculate probability:
 ![image](https://github.com/Lemon-cmd/GuassianNB/blob/master/Image%201-23-20%20at%202.49%20PM.jpg). 
 
 For example, if the current input entry is [1.4, 2.4, 3.5, 5.0].   
+      
 For iteration, calculate the probability for each element of input.    
 
 Basically, probability(C) = probability(INP(0)) * probability(INP(1)) ... * proability(INP(n));      
